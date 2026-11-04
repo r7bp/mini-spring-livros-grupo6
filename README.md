@@ -5,15 +5,13 @@ API REST em **Java 21** para cadastro dos livros de uma biblioteca, construída 
 ## Integrantes
 
 | Nome | Matrícula |
-| --- | --- |
-| Ruan Henry Nascimento Cunha | 202517640037 |
-| Gleysson Robert de Oliveira Silva | 20251764014 |
-| Victor Kauã Dias Ferreira | 202517640039 |
+|------|-----------|
+| Caique Lucas Ribeiro Lupercinio dos Santos | 202517640070 |
+| Davyd de Oliveira Melo | 202517640072 |
+| Gleysson Robert de Oliveira Silva | 202517640014 |
 | Pablo Henrique Braz dos Santos | 202517640046 |
-
-## Uso de IA
-
-Foi utilizada a IA **Claude (Anthropic)** como apoio na adaptação do projeto-base para o domínio de livros, na escrita dos testes, do `requests.http`, da coleção Postman e deste README. Todo o código foi lido, executado e é compreendido por todos os integrantes do grupo, que são responsáveis por explicá-lo.
+| Ruan Henry Nascimento Cunha | 202517640037 |
+| Victor Kauã Dias Ferreira | 202517640039 |
 
 ## Domínio
 
