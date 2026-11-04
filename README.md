@@ -4,14 +4,15 @@ API REST em **Java 21** para cadastro dos livros de uma biblioteca, construída 
 
 ## Integrantes
 
-| Nome | Matrícula |
-|------|-----------|
+| Nome | Matrícula | Usuário no GitHub |
+|------|-----------|-------------------|
 | Caique Lucas Ribeiro Lupercinio dos Santos | 202517640070 |
-| Davyd de Oliveira Melo | 202517640072 |
-| Gleysson Robert de Oliveira Silva | 202517640014 |
-| Pablo Henrique Braz dos Santos | 202517640046 |
+| Davyd de Oliveira Melo | 202517640072 |  Usuário no GitHub: EasyDavyd |
+| Gleysson Robert de Oliveira Silva | 202517640014 | Usuário no GitHub: r7bp |
+| Pablo Henrique Braz dos Santos | 202517640046 | Usuário no GitHub: PabloHenrique0707 |
 | Ruan Henry Nascimento Cunha | 202517640037 |
-| Victor Kauã Dias Ferreira | 202517640039 |
+| Victor Kauã Dias Ferreira | 202517640039 |  Usuário no GitHub: Maquista323 |
+|Jefferson Vitor da Silva Lima - 202517640029
 
 ## Uso de IA
 
