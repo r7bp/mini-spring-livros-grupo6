@@ -1,0 +1,128 @@
+@baseUrl = http://127.0.0.1:8080
+
+### ============================================================
+### API de Catálogo de Livros — Grupo 6
+### Rode em ordem, com a aplicação recém-iniciada: o primeiro
+### livro criado recebe ID 1 e o segundo recebe ID 2.
+### ============================================================
+
+### Informações da aplicação
+GET {{baseUrl}}/
+
+### Saúde
+GET {{baseUrl}}/health
+
+### ---------------------------- SUCESSO ----------------------------
+
+### Criar livro -> 201 + cabeçalho Location: /livros/1
+POST {{baseUrl}}/livros
+Content-Type: application/json
+
+{"titulo":"Dom Casmurro","numeroPaginas":256}
+
+### Criar segundo livro -> 201 (ID 2)
+POST {{baseUrl}}/livros
+Content-Type: application/json
+
+{"titulo":"Java Efetivo","numeroPaginas":416}
+
+### Criar livro no limite exato (5000 páginas) -> 201
+POST {{baseUrl}}/livros
+Content-Type: application/json
+
+{"titulo":"Enciclopédia em volume único","numeroPaginas":5000}
+
+### Listar todos -> 200
+GET {{baseUrl}}/livros
+
+### Filtrar por parte do título, sem diferenciar maiúsculas -> 200
+GET {{baseUrl}}/livros?titulo=JAVA
+
+### Filtro sem resultado -> 200 com lista vazia
+GET {{baseUrl}}/livros?titulo=python
+
+### Consultar por ID -> 200
+GET {{baseUrl}}/livros/1
+
+### Atualizar -> 200 (o ID 1 é preservado)
+PUT {{baseUrl}}/livros/1
+Content-Type: application/json
+
+{"titulo":"Dom Casmurro (edição comentada)","numeroPaginas":320}
+
+### Excluir -> 204 sem corpo
+DELETE {{baseUrl}}/livros/2
+
+### ------------------------------ ERROS ----------------------------
+
+### 400 — título em branco e número de páginas zero (2 erros em "details")
+POST {{baseUrl}}/livros
+Content-Type: application/json
+
+{"titulo":"   ","numeroPaginas":0}
+
+### 400 — número de páginas negativo
+POST {{baseUrl}}/livros
+Content-Type: application/json
+
+{"titulo":"Livro inválido","numeroPaginas":-10}
+
+### 400 — JSON malformado
+POST {{baseUrl}}/livros
+Content-Type: application/json
+
+{"titulo":
+
+### 400 — campo desconhecido (o cliente não pode escolher o ID)
+POST {{baseUrl}}/livros
+Content-Type: application/json
+
+{"id":99,"titulo":"Tentando escolher o ID","numeroPaginas":100}
+
+### 400 — ID não numérico
+GET {{baseUrl}}/livros/abc
+
+### 400 — mesmas validações na atualização
+PUT {{baseUrl}}/livros/1
+Content-Type: application/json
+
+{"titulo":"","numeroPaginas":100}
+
+### 422 — regra de negócio: máximo de 5000 páginas (cadastro)
+POST {{baseUrl}}/livros
+Content-Type: application/json
+
+{"titulo":"Livro gigante demais","numeroPaginas":5001}
+
+### 422 — regra de negócio na atualização (o livro 1 NÃO é alterado)
+PUT {{baseUrl}}/livros/1
+Content-Type: application/json
+
+{"titulo":"Tentativa rejeitada","numeroPaginas":5001}
+
+### Confirma que o livro 1 continua como estava -> 200
+GET {{baseUrl}}/livros/1
+
+### 404 — livro inexistente (consulta)
+GET {{baseUrl}}/livros/999
+
+### 404 — livro inexistente (atualização)
+PUT {{baseUrl}}/livros/999
+Content-Type: application/json
+
+{"titulo":"Fantasma","numeroPaginas":100}
+
+### 404 — livro inexistente (exclusão)
+DELETE {{baseUrl}}/livros/999
+
+### 404 — rota inexistente
+GET {{baseUrl}}/editoras
+
+### 405 — método não permitido (cabeçalho Allow na resposta)
+PATCH {{baseUrl}}/livros/1
+
+### 415 — tipo de mídia inválido
+POST {{baseUrl}}/livros
+Content-Type: text/plain
+
+texto
