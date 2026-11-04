@@ -1,6 +1,6 @@
 # API de Catálogo de Livros — Grupo 6
 
-API REST em **Java 21** para cadastro dos livros de uma biblioteca, construída sobre o framework didático **Mini Spring** (projeto-base: <https://github.com/ferreiralisson/mini-spring>). Os dados ficam em memória e o pacote `framework` foi mantido sem alterações: toda a adaptação está em `br.com.minispring.exemplo`.
+API REST em **Java 21** para cadastro dos livros de uma biblioteca, construída sobre o framework didático **Mini Spring** (projeto-base: <https://github.com/ferreiralisson/mini-spring>). Os dados ficam em memória e o pacote `framework` foi mantido sem alterações: toda a adaptação está em: `br.com.minispring.exemplo`.
 
 ## Integrantes
 
