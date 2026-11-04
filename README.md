@@ -13,6 +13,10 @@ API REST em **Java 21** para cadastro dos livros de uma biblioteca, construída 
 | Ruan Henry Nascimento Cunha | 202517640037 |
 | Victor Kauã Dias Ferreira | 202517640039 |
 
+## Uso de IA
+
+Foi utilizada a IA **Claude (Anthropic)** como apoio na adaptação do projeto-base para o domínio de livros, na escrita dos testes, do `requests.http`, da coleção Postman e deste README. Todo o código foi lido, executado e é compreendido por todos os integrantes do grupo, que são responsáveis por explicá-lo.
+
 ## Domínio
 
 Uma biblioteca precisa manter o catálogo de seus livros. A entidade principal é o **Livro**, com:
