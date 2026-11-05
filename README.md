@@ -6,13 +6,13 @@ API REST em **Java 21** para cadastro dos livros de uma biblioteca, construída 
 
 | Nome | Matrícula | Usuário no GitHub |
 |------|-----------|-------------------|
-| Caique Lucas Ribeiro Lupercinio dos Santos | 202517640070 | Usuário no GitHub: caique-lucas |
-| Davyd de Oliveira Melo | 202517640072 |  Usuário no GitHub: EasyDavyd |
-| Gleysson Robert de Oliveira Silva | 202517640014 | Usuário no GitHub: r7bp |
-| Pablo Henrique Braz dos Santos | 202517640046 | Usuário no GitHub: PabloHenrique0707 |
-| Ruan Henry Nascimento Cunha | 202517640037 |  Usuário no GitHub: ruanhenry10 |
-| Victor Kauã Dias Ferreira | 202517640039 |  Usuário no GitHub: Maquista323 |
-|Jefferson Vitor da Silva Lima | 202517640029 | Usuário no GitHub: JeffinzinLima |
+| Caique Lucas Ribeiro Lupercinio dos Santos | 202517640070 | caique-lucas |
+| Davyd de Oliveira Melo | 202517640072 | EasyDavyd |
+| Gleysson Robert de Oliveira Silva | 202517640014 | r7bp |
+| Pablo Henrique Braz dos Santos | 202517640046 | PabloHenrique0707 |
+| Ruan Henry Nascimento Cunha | 202517640037 | ruanhenry10 |
+| Victor Kauã Dias Ferreira | 202517640039 | Maquista323 |
+|Jefferson Vitor da Silva Lima | 202517640029 | JeffinzinLima |
 
 ## Uso de IA
 
@@ -126,8 +126,6 @@ src/main/java/br/com/minispring/
 5. O **Service** verifica o limite de 5.000 páginas (falha → 422) e só então chama o **Repository**.
 6. O **Repository** gera o ID, guarda o `Livro` em memória e o devolve.
 7. O Controller responde `HttpResult.created("/livros/{id}", livro)` → o dispatcher serializa em JSON e envia **201** com `Location`.
-
-Mais detalhes do framework em [`docs/ARQUITETURA.md`](docs/ARQUITETURA.md).
 
 ## Limitações
 
